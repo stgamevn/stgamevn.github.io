@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STGAME | Official Site</title>
+    <style>
+        :root {
+            --primary-color: #00d4ff;
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #f8fafc;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            width: 100%;
+            padding: 40px 0;
+            text-align: center;
+            background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--primary-color);
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 90%;
+            padding: 40px 0;
+        }
+
+        .tagline {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #94a3b8;
+            margin-bottom: 50px;
+        }
+
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .game-card {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #334155;
+        }
+
+        .game-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            border-color: var(--primary-color);
+        }
+
+        .game-icon {
+            width: 80px;
+            height: 80px;
+            background-color: #334155;
+            border-radius: 18px;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #000;
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 40px;
+            color: #64748b;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .privacy-link {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>STGAME</h1>
+    </header>
+
+    <div class="container">
+        <p class="tagline">Providing high-quality gaming experiences for everyone.</p>
+
+        <div class="game-grid">
+            <div class="game-card">
+                <div class="game-icon"></div>
+                <h3>Our Latest Game</h3>
+                <p>Exciting adventures await you in our newest release.</p>
+                <a href="https://play.google.com/store/apps/developer?id=WILLGAME" class="btn">View on Play Store</a>
+            </div>
+
+            <div class="game-card">
+                <div class="game-icon"></div>
+                <h3>Coming Soon</h3>
+                <p>Stay tuned for our next big project in 2026.</p>
+                <a href="#" class="btn" style="background:#475569; cursor:default;">Coming Soon</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 STGAME. All rights reserved.</p>
+        <p><a href="app-ads.txt" class="privacy-link">App-Ads.txt</a> | <a href="#" class="privacy-link">Privacy Policy</a></p>
+    </footer>
+
+</body>
+</html>
