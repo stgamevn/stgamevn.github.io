@@ -66,12 +66,48 @@
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             border: 1px solid #334155;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .game-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
             border-color: var(--primary-color);
+        }
+
+        .game-icon {
+            width: 80px;
+            height: 80px;
+            background-color: #334155;
+            border-radius: 18px;
+            margin-bottom: 15px;
+        }
+
+        /* Button Container Styling */
+        .button-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: opacity 0.2s;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
         }
 
         /* Support Section Styling */
@@ -95,32 +131,6 @@
             font-size: 1.1rem;
             color: var(--primary-color);
             text-decoration: none;
-            transition: opacity 0.3s;
-        }
-
-        .support-email:hover {
-            text-decoration: underline;
-            opacity: 0.8;
-        }
-
-        .game-icon {
-            width: 80px;
-            height: 80px;
-            background-color: #334155;
-            border-radius: 18px;
-            margin-bottom: 15px;
-            display: inline-block;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--primary-color);
-            color: #000;
-            padding: 10px 25px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 15px;
         }
 
         footer {
@@ -151,14 +161,19 @@
                 <div class="game-icon"></div>
                 <h3>Our Latest Game</h3>
                 <p>Exciting adventures await you in our newest release.</p>
-                <a href="https://play.google.com/store/apps/developer?id=WILLGAME" class="btn">View on Play Store</a>
+                <div class="button-group">
+                    <a href="https://play.google.com/store/apps/developer?id=WILLGAME" class="btn">Google Play</a>
+                    <a href="https://apps.apple.com/us/developer/toan-nguyen/id697770678" class="btn">App Store</a>
+                </div>
             </div>
 
             <div class="game-card">
                 <div class="game-icon"></div>
                 <h3>Coming Soon</h3>
                 <p>Stay tuned for our next big project in 2026.</p>
-                <a href="#" class="btn" style="background:#475569; cursor:default;">Coming Soon</a>
+                <div class="button-group">
+                    <a href="#" class="btn" style="background:#475569; cursor:default;">Stay Tuned</a>
+                </div>
             </div>
         </div>
 
