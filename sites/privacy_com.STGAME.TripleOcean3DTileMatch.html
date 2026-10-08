@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Triple Ocean 3D: Tile Match</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-gradient-start: #0a192f;
+            --bg-gradient-end: #0f3057;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --card-border: rgba(255, 255, 255, 0.12);
+            --card-hover: rgba(255, 255, 255, 0.08);
+            --accent-cyan: #00e8c6;
+            --accent-blue: #0098f7;
+            --accent-gold: #ffbe3b;
+            --text-main: #f0f6fc;
+            --text-muted: #94a3b8;
+            --text-heading: #ffffff;
+            --radius-lg: 20px;
+            --radius-md: 12px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(145deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+            color: var(--text-main);
+            min-height: 100vh;
+            line-height: 1.7;
+            padding: 40px 20px;
+            overflow-x: hidden;
+        }
+
+        .ambient-glow {
+            position: fixed;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(0, 232, 198, 0.12) 0%, rgba(0, 152, 247, 0.05) 50%, transparent 70%);
+            top: -200px;
+            right: -200px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .ambient-glow-2 {
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(0, 152, 247, 0.1) 0%, transparent 70%);
+            bottom: -150px;
+            left: -150px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 45px;
+            padding: 30px 20px;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: var(--radius-lg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            border-radius: 50px;
+            background: rgba(0, 232, 198, 0.12);
+            color: var(--accent-cyan);
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+            border: 1px solid rgba(0, 232, 198, 0.25);
+        }
+
+        .badge-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--accent-cyan);
+            box-shadow: 0 0 10px var(--accent-cyan);
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: var(--text-heading);
+            letter-spacing: -0.5px;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #ffffff 40%, var(--accent-cyan) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            font-weight: 500;
+        }
+
+        .meta-info {
+            margin-top: 18px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .meta-item strong {
+            color: var(--accent-cyan);
+        }
+
+        .content-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: var(--radius-lg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+        }
+
+        section {
+            margin-bottom: 35px;
+        }
+
+        section:last-child {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-size: 1.45rem;
+            font-weight: 700;
+            color: var(--text-heading);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding-bottom: 10px;
+        }
+
+        h2 span.num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+            color: #061121;
+            font-size: 0.95rem;
+            font-weight: 800;
+        }
+
+        h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--accent-cyan);
+            margin: 20px 0 10px 0;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: var(--text-main);
+            font-size: 1rem;
+        }
+
+        ul {
+            list-style: none;
+            margin-bottom: 20px;
+            padding-left: 5px;
+        }
+
+        li {
+            position: relative;
+            padding-left: 26px;
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+
+        li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--accent-cyan);
+            font-size: 0.95rem;
+        }
+
+        .highlight-box {
+            background: rgba(0, 232, 198, 0.06);
+            border-left: 4px solid var(--accent-cyan);
+            padding: 20px 24px;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            margin: 20px 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            color: #d8fbf4;
+            font-size: 0.98rem;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, rgba(0, 232, 198, 0.12) 0%, rgba(0, 152, 247, 0.12) 100%);
+            border: 1px solid rgba(0, 232, 198, 0.3);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        .contact-email {
+            display: inline-block;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            text-decoration: none;
+            margin-top: 8px;
+            padding: 8px 24px;
+            background: rgba(0, 232, 198, 0.15);
+            border-radius: 50px;
+            border: 1px solid rgba(0, 232, 198, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .contact-email:hover {
+            background: var(--accent-cyan);
+            color: #061121;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 232, 198, 0.35);
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px 20px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            color: var(--text-muted);
+            margin-bottom: 6px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 12px;
+            }
+            .content-card {
+                padding: 25px 20px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ambient-glow"></div>
+    <div class="ambient-glow-2"></div>
+
+    <div class="container">
+        <header>
+            <div class="badge">
+                <span class="badge-dot"></span> Official Privacy Policy
+            </div>
+            <h1>Triple Ocean 3D: Tile Match</h1>
+            <div class="subtitle">Comprehensive Privacy Policy & User Data Protection</div>
+            <div class="meta-info">
+                <div class="meta-item">Application ID: <strong>com.STGAME.TripleOcean3DTileMatch</strong></div>
+                <div class="meta-item">Developer: <strong>STGAME</strong></div>
+                <div class="meta-item">Effective Date: <strong>October 2026</strong></div>
+            </div>
+        </header>
+
+        <main class="content-card">
+            <!-- 1. Introduction -->
+            <section>
+                <h2><span class="num">1</span> Introduction & Overview</h2>
+                <p>Welcome to <strong>Triple Ocean 3D: Tile Match</strong> ("the Game", "we", "us", or "our"), developed and published by <strong>STGAME</strong>. We respect your privacy and are committed to protecting any personal data that may be processed in connection with your use of our mobile application across iOS (Apple App Store) and Android (Google Play Store).</p>
+                <p>This Privacy Policy explains how information is handled when you download, install, play, or interact with <strong>Triple Ocean 3D: Tile Match</strong>. By downloading and playing the Game, you agree to the collection and use of information in accordance with this policy.</p>
+            </section>
+
+            <!-- 2. Information We Collect -->
+            <section>
+                <h2><span class="num">2</span> Information We Collect</h2>
+                <p>We are dedicated to maintaining a privacy-friendly gaming environment. We do <strong>not</strong> require you to provide personally identifiable information (such as your real name, physical address, or phone number) to play the core game.</p>
+                
+                <h3>A. Automatically Collected Technical Data</h3>
+                <p>When you play the Game, certain non-personal device information may be automatically collected by our third-party service providers (such as game engines, analytics, and advertising networks):</p>
+                <ul>
+                    <li><strong>Device Specifications:</strong> Device model, manufacturer, operating system version (iOS / Android), system language, screen resolution, and available storage.</li>
+                    <li><strong>Gameplay & Session Telemetry:</strong> Level progress, high scores, coins, power-up usage, session duration, and game settings.</li>
+                    <li><strong>Performance & Stability Data:</strong> Crash logs, memory errors, frame rate statistics, and diagnostic reports to identify and fix technical bugs.</li>
+                    <li><strong>Device Identifiers:</strong> Anonymous advertising identifiers (such as Apple IDFA or Google Advertising ID / GAID), subject to your explicit device permissions.</li>
+                </ul>
+
+                <h3>B. In-App Purchases & Billing</h3>
+                <p>All in-app purchases (such as coin packs or booster bundles) are processed directly by Apple Inc. (App Store) or Google LLC (Google Play Store). We do <strong>not</strong> collect, process, or store your credit card or financial billing information.</p>
+            </section>
+
+            <!-- 3. How We Use Information -->
+            <section>
+                <h2><span class="num">3</span> How We Use Your Information</h2>
+                <p>The information collected is used strictly for the following legitimate purposes:</p>
+                <ul>
+                    <li><strong>Delivering Core Gameplay:</strong> Storing and restoring your level progress, coin balance, unlocked aquarium fish species, and custom preferences.</li>
+                    <li><strong>Performance Optimization:</strong> Monitoring stability, reducing lag, fixing unexpected game crashes, and enhancing 3D rendering performance across various mobile devices.</li>
+                    <li><strong>Game Balancing & Updates:</strong> Analyzing level difficulty, completion rates, and power-up usage to deliver fun and balanced puzzle updates.</li>
+                    <li><strong>In-Game Advertisements:</strong> Serving non-intrusive banner, interstitial, or rewarded video ads (such as earning coins or extra dock slots), compliant with applicable privacy standards.</li>
+                    <li><strong>Customer Support:</strong> Responding to user inquiries, bug reports, and feedback submitted via email.</li>
+                </ul>
+            </section>
+
+            <!-- 4. Third-Party Service Providers -->
+            <section>
+                <h2><span class="num">4</span> Third-Party Services & SDKs</h2>
+                <p>Our game integrates trusted third-party SDKs to provide essential game engine infrastructure, analytics, and advertising services. These partners may collect anonymized data governed by their respective privacy policies:</p>
+                <ul>
+                    <li><strong>Unity Technologies (Unity Engine & Analytics):</strong> Provides 3D engine runtime, graphics pipelines, and telemetry. <a href="https://unity3d.com/legal/privacy-policy" target="_blank" style="color: var(--accent-cyan);">Unity Privacy Policy</a></li>
+                    <li><strong>Google AdMob / Google Play Services:</strong> Delivers contextual and rewarded in-game advertisements. <a href="https://policies.google.com/privacy" target="_blank" style="color: var(--accent-cyan);">Google Privacy Policy</a></li>
+                    <li><strong>Apple App Store & Game Center:</strong> Manages authentication, cloud saves, and purchases on iOS. <a href="https://www.apple.com/legal/privacy/" target="_blank" style="color: var(--accent-cyan);">Apple Privacy Policy</a></li>
+                </ul>
+            </section>
+
+            <!-- 5. Children's Privacy -->
+            <section>
+                <h2><span class="num">5</span> Children's Privacy (COPPA Compliance)</h2>
+                <div class="highlight-box">
+                    <p><strong>Triple Ocean 3D: Tile Match</strong> is designed for a general casual gaming audience. We do not knowingly collect, solicit, or maintain personally identifiable information from children under the age of 13 (or under 16 in the European Economic Area).</p>
+                </div>
+                <p>If you are a parent or guardian and believe that your child has provided personal information to us without appropriate consent, please contact us immediately at <a href="mailto:toan_stt@yahoo.com" style="color: var(--accent-cyan);">toan_stt@yahoo.com</a>. We will promptly take steps to delete any such data from our records.</p>
+            </section>
+
+            <!-- 6. User Rights (GDPR & CCPA) -->
+            <section>
+                <h2><span class="num">6</span> Your Privacy Rights (GDPR & CCPA)</h2>
+                <p>Depending on your jurisdiction (including the European Economic Area, the United Kingdom, and California), you may hold the following statutory privacy rights:</p>
+                <ul>
+                    <li><strong>Right to Access & Portability:</strong> Request confirmation of what personal data (if any) is being processed.</li>
+                    <li><strong>Right to Rectification & Deletion:</strong> Request correction or complete erasure of your data.</li>
+                    <li><strong>Right to Opt-Out of Personalized Advertising:</strong> You can reset or limit ad tracking at any time through your mobile device settings:
+                        <br>&bull; <em>iOS:</em> Settings &gt; Privacy &amp; Security &gt; Tracking &gt; toggle off app tracking.
+                        <br>&bull; <em>Android:</em> Settings &gt; Google &gt; Ads &gt; Reset advertising ID or Delete advertising ID.
+                    </li>
+                </ul>
+                <p>To exercise any of these rights, simply email our data privacy contact at <a href="mailto:toan_stt@yahoo.com" style="color: var(--accent-cyan);">toan_stt@yahoo.com</a> with your request.</p>
+            </section>
+
+            <!-- 7. Data Retention & Security -->
+            <section>
+                <h2><span class="num">7</span> Data Retention & Security</h2>
+                <p>We implement industry-standard organizational and technical security measures to protect against unauthorized access, alteration, or disclosure of data. Game save data is primarily stored locally on your device or linked securely via standard platform cloud save features (iCloud / Google Play Games). We retain analytics data only as long as necessary to fulfill the operational purposes described herein.</p>
+            </section>
+
+            <!-- 8. Updates to This Policy -->
+            <section>
+                <h2><span class="num">8</span> Changes to This Privacy Policy</h2>
+                <p>We may update this Privacy Policy from time to time to reflect modifications in our game features, technologies, or applicable laws. Any updates will be published directly on this page with an updated "Effective Date". We encourage you to review this policy periodically.</p>
+            </section>
+
+            <!-- 9. Contact Us -->
+            <section>
+                <h2><span class="num">9</span> Contact Information</h2>
+                <p>If you have any questions, suggestions, concerns, or requests regarding this Privacy Policy or your personal data, please contact the developer directly at:</p>
+                
+                <div class="contact-box">
+                    <p style="font-weight: 600; color: #ffffff;">Developer & Privacy Contact: STGAME</p>
+                    <a href="mailto:toan_stt@yahoo.com" class="contact-email">toan_stt@yahoo.com</a>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 12px; margin-bottom: 0;">We typically respond to all privacy inquiries within 48 business hours.</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 STGAME. All rights reserved.</p>
+            <p>Triple Ocean 3D: Tile Match &bull; Package ID: com.STGAME.TripleOcean3DTileMatch</p>
+        </footer>
+    </div>
+</body>
+</html>
